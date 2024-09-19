@@ -2,35 +2,80 @@ package no.hvl.dat250.jpa.tutorial.creditcards;
 
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Set;
+
 @Entity
 public class CreditCard {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private Integer number;
+    private Integer balance;
+    private Integer creditLimit;
+    @ManyToOne
+    private Pincode pincode;
+    @ManyToOne
+    private Bank bank;
+    @ManyToMany
+    private Set<Customer> owners = new HashSet();
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public Integer getNumber() {
-        // TODO: implement method!
-        return null;
+        return number;
+    }
+
+    public void setNumber(Integer number) {
+        this.number = number;
     }
 
     public Integer getBalance() {
-        // TODO: implement method!
-        return null;
+        return balance;
+    }
+
+    public void setBalance(Integer balance) {
+        this.balance = balance;
     }
 
     public Integer getCreditLimit() {
-        // TODO: implement method!
-        return null;
+        return creditLimit;
+    }
+
+    public void setCreditLimit(Integer creditLimit) {
+        this.creditLimit = creditLimit;
     }
 
     public Pincode getPincode() {
-        // TODO: implement method!
-        return null;
+        return pincode;
+    }
+
+    public void setPincode(Pincode pincode) {
+        this.pincode = pincode;
     }
 
     public Bank getOwningBank() {
-        // TODO: implement method!
-        return null;
+        return bank;
+    }
+
+    public void setOwningBank(Bank bank) {
+        this.bank = bank;
+    }
+
+    public Collection<Customer> getOwners() {
+        return owners;
+    }
+
+    public void setOwners(Set<Customer> owners) {
+        this.owners = owners;
     }
 }
