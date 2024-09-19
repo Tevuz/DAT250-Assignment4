@@ -2,7 +2,6 @@ package no.hvl.dat250.jpa.tutorial.creditcards;
 
 import jakarta.persistence.*;
 
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
@@ -21,7 +20,7 @@ public class CreditCard {
     @ManyToOne
     private Bank bank;
     @ManyToMany
-    private Set<Customer> owners = new HashSet();
+    private Set<Customer> owners = new HashSet<>();
 
     public Long getId() {
         return id;

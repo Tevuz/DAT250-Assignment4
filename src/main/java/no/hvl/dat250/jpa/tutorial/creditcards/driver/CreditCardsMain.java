@@ -3,7 +3,6 @@ package no.hvl.dat250.jpa.tutorial.creditcards.driver;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
-import jakarta.persistence.Query;
 import no.hvl.dat250.jpa.tutorial.creditcards.*;
 
 public class CreditCardsMain {

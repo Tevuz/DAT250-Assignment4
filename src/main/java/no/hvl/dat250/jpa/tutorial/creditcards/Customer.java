@@ -11,9 +11,9 @@ public class Customer {
     private Long id;
     private String name;
     @ManyToMany
-    private Set<Address> addresses = new HashSet();
+    private Set<Address> addresses = new HashSet<>();
     @ManyToMany
-    private Set<CreditCard> creditCards = new HashSet();
+    private Set<CreditCard> creditCards = new HashSet<>();
 
     public Long getId() {
         return id;

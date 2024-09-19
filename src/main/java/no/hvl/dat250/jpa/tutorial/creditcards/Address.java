@@ -12,7 +12,7 @@ public class Address {
     private String street;
     private Integer number;
     @ManyToMany
-    private Set<Customer> owners = new HashSet();
+    private Set<Customer> owners = new HashSet<>();
 
     public Long getId() {
         return id;

@@ -2,7 +2,6 @@ package no.hvl.dat250.jpa.tutorial.creditcards;
 
 import jakarta.persistence.*;
 
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
@@ -15,7 +14,7 @@ public class Pincode {
     private String pincode;
     private Integer count;
     @OneToMany
-    private Set<CreditCard> cards = new HashSet();
+    private Set<CreditCard> cards = new HashSet<>();
 
     public Long getId() {
         return id;
